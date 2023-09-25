@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Button } from "react-native";
 import * as Yup from "yup";
 import useLocation from "../hooks/useLocation";
 
@@ -79,9 +79,8 @@ const categories = [
   },
 ];
 
-function ListingEditScreen(props) {
+function ListingEditScreen({ navigation }) {
   const location = useLocation();
-  
 
   return (
     <Screen style={styles.container}>

@@ -1,15 +1,13 @@
 import React from "react";
-import Screen from "./app/components/Screen";
-import * as ImagePicker from "expo-image-picker";
-import * as Permissions from "expo-permissions";
-import { Button, Image, TouchableOpacity } from "react-native";
-import ImageInputList from "./app/components/ImageInputList";
-import ImageInput from "./app/components/ImageInput";
-import ListingEditScreen from "./app/screens/ListingEditScreen";
+import { View, Button, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import AppNavigator from "./app/components/navigation/AppNavigator";
+import navigationTheme from "./app/components/navigation/navigationTheme";
 
 export default function App() {
-  
   return (
-    <ListingEditScreen />
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }

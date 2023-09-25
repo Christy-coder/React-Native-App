@@ -4,13 +4,14 @@ import AppText from "../components/AppText";
 import ListItem from "../components/ListItem";
 import colors from "../config/colors";
 
-function ListingDetailScreen(props) {
+function ListingDetailScreen({ route }) {
+  const listing = route.params;
   return (
     <View>
-      <Image style={styles.image} source={require("../assets/jacket.webp")} />
+      <Image style={styles.image} source={listing.image} />
       <View style={styles.detailContainer}>
-        <AppText style={styles.title}>Green jacket for sale </AppText>
-        <AppText style={styles.price}>$100 </AppText>
+        <AppText style={styles.title}>{listing.title} </AppText>
+        <AppText style={styles.price}>${listing.price} </AppText>
         <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/christy.jpeg")}
